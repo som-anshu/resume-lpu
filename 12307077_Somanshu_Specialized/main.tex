@@ -1,0 +1,192 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+% Font options - Exact template font configuration
+\renewcommand{\familydefault}{\sfdefault}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Margins & Layout structural fixes
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\setlength{\footskip}{5.0pt} 
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - Using \MakeUppercase fixes color transformation conflicts cleanly
+\titleformat{\section}{\vspace{-4pt}\raggedright\large\bfseries}{}{0em}{\MakeUppercase}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable for ATS
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{@{}l @{\extracolsep{\fill}} r@{}}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}
+  \vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{@{}l @{\extracolsep{\fill}} r@{}}
+      \small#1 & #2 \\
+    \end{tabular*}
+    \vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \textmd{Somanshu Mohapatra}} \\ \vspace{2pt}
+    \small \faPhone\ +91 7982305740 ~ \href{mailto:somanshu025@gmail.com}{\faEnvelope\ somanshu025@gmail.com} ~ 
+    \href{https://linkedin.com/in/somanshu-mohapatra}{\faLinkedin\ linkedin.com/in/somanshu-mohapatra} ~
+    \href{https://github.com/som-anshu}{\faGithub\ github.com/som-anshu}
+\end{center}
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:}{ C++, Python, Embedded C, MATLAB (Simulink, Robotics Toolbox).} \\
+     \textbf{Robotics:}{ Forward/Inverse Kinematics (DH Parameters), ROS2, Gazebo, Path Planning, Motion Control, PID Control, Sensor Fusion, SLAM.} \\
+     \textbf{Electronics:}{ Arduino UNO Q, Raspberry Pi, STM32, ATmega328P, RP2040, Motor Drivers (DRV8825, TB6600), Serial Communication (UART, I2C, SPI, CAN).} \\
+     \textbf{CAD \& Design:}{ SolidWorks, Fusion 360, AutoCAD, Creo Parametric, FEA, Assembly Design, Rapid Prototyping, 3D Printing (FDM/SLA).} \\
+     \textbf{Soft Skills:}{ Effective Organizer, Team Management, Strong Interpersonal Skills, Problem Solving.}
+    }}
+ \end{itemize}
+
+
+%-----------EXPERIENCE-----------
+\section{Internship}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://drive.google.com/file/d/1PUqcvq8SkgS4APbpqYSwzsYsXNxvOywR/view?usp=drive_link}{AutomateX -- PLC based training for Industrial Automation}}{Jun' 25 -- Jul' 25}
+      {Student Intern $|$ Ladder Logic, LogixPro, TwidoSuite}{}
+      \resumeItemListStart
+        \resumeItem{Engineered an automated feeder control system in LogixPro using ladder logic, reducing manual labor by 70\% and feed wastage by 25\%.}
+        \resumeItem{Implemented safety interlocks, emergency-stop recovery, and auto/manual modes to ensure zero-failure restart behavior and reliable operation.}
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+    
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/som-anshu/damn}{Dynamic Audio Monitoring and Narration}} $|$ \emph{Raspberry Pi, Python, AssemblyAI API}}{Apr' 25 -- May' 25}
+          \resumeItemListStart
+            \resumeItem{Developed a Python-based real-time transcription system for the deaf using Raspberry Pi 4B, achieving 95\%+ accuracy with $<$300ms latency.}
+            \resumeItem{Integrated AssemblyAI WebSockets with an I2C SSD1306 OLED display using multi-threading to ensure seamless, non-blocking subtitle updates.}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/som-anshu/MATLAB-controlled-robotic-manipulator}{3-DOF Robotic Arm with Real-Time Control}} $|$ \emph{MATLAB, SolidWorks, Arduino IDE, Bambu Studio}}{Apr' 24}
+          \resumeItemListStart
+            \resumeItem{Constructed a 3-DOF robotic arm using NEMA 17 steppers and Arduino Mega, utilizing 3D-printed components to optimize payload-to-weight ratio.}
+            \resumeItem{Implemented forward and inverse kinematics via MATLAB-UART communication, reducing trajectory error by 20\% during real-time tasks.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Smart Energy Meter} $|$ \emph{ESP32, IoT Monitoring, HTML Webserver}}{Jun' 23}
+          \resumeItemListStart
+            \resumeItem{Designed an IoT-based energy monitoring system using ESP32 and Wi-Fi to track power consumption via a real-time browser interface.}
+            \resumeItem{Integrated ZMPT101B and ZMCT103C sensors to measure voltage and current with $\pm$3\% accuracy visualized via custom HTML dashboard.}
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+
+
+%-----------CERTIFICATES-----------
+\section{Certificates}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\textbf{\href{https://drive.google.com/file/d/1cPZTNh-I-6y_1j0XR1dyLbr4Padv7GvN/view?usp=drive_link}{Data Base Management System}} $|$ \emph{NPTEL}}{Aug' 25}
+      \resumeProjectHeading
+        {\textbf{\href{https://drive.google.com/file/d/1PUqcvq8SkgS4APbpqYSwzsYsXNxvOywR/view?usp=drive_link}{AutomateX: Mastering PLCs for Industrial Automation}} $|$ \emph{LPU}}{Mar' 25}
+      \resumeProjectHeading
+        {\textbf{\href{https://drive.google.com/file/d/16txdJfMjoQ9aB_c2yHVEDFoT7vu3QOEp/view?usp=drive_link}{Fusioncraft}} $|$ \emph{Resolute Lab}}{Mar' 24}
+    \resumeSubHeadingListEnd
+
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+    \resumeSubHeadingListStart
+      \item
+      \begin{tabularx}{0.97\textwidth}[t]{@{}X r@{}}
+        \textbf{\href{https://drive.google.com/file/d/1PNy_NGYBe1Dt2zS2FtCkgpTa2ak69WHM/view?usp=drive_link}{METHOD FOR ENHANCING FOOD ACCESSIBILITY, MONITORING FRESHNESS, AND REDUCING ENERGY LOSS IN CYLINDRICAL REFRIGERATION UNITS}} & \small Sep' 25
+      \end{tabularx}
+      \vspace{-5pt}
+      \resumeItemListStart
+        \resumeItem{Somanshu Mohapatra, Dr. Sumit Shoor}
+        \resumeItem{Application No.: 202511085342 A}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Lovely Professional University}{Phagwara, Punjab}
+      {Bachelor of Technology in Robotics and Automation Engineering — CGPA: 8.38}{Aug' 23 -- Present}
+    \resumeSubheading
+      {Shri S.N. Siddeshwar Public School}{Gurugram, Haryana}
+      {Intermediate, PCMB — Percentage: 85.6\%}{Mar' 21 -- May' 23}
+    \resumeSubheading
+      {Ryan International School}{Gurugram, Haryana}
+      {Matriculation — Percentage: 81.6\%}{Mar' 20 -- May' 21}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
