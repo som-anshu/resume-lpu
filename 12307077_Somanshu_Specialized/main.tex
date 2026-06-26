@@ -5,6 +5,7 @@
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
@@ -12,7 +13,7 @@
 \usepackage{tabularx}
 \usepackage{fontawesome5}
 
-% Font Setup - Georgia 10pt (Compatible with XeLaTeX)
+% Font Setup - Georgia 10pt
 \usepackage{fontspec}
 \setmainfont{Georgia}[Scale=1.0]
 
@@ -81,20 +82,54 @@
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages:}{ Experienced in C++, Python, Embedded C, and MATLAB for algorithm development and simulation.} \\ \vspace{2pt}
-     \textbf{Robotics:}{ Applied Forward/Inverse Kinematics (DH Parameters), ROS, and Gazebo for path planning and SLAM.} \\ \vspace{2pt}
-     \textbf{Electronics:}{ Configured Arduino UNO, Raspberry Pi, STM, and motor drivers utilizing UART, I2C, SPI, and CAN.} \\ \vspace{2pt}
-     \textbf{CAD \& Design:}{ Designed assemblies using SolidWorks and Fusion, applying FEA and FDM/SLA printing for prototyping.} \\ \vspace{2pt}
-     \textbf{Soft Skills:}{ Effective Organizer, Team Management, Strong Interpersonal Skills, and logical Problem Solving.}
+     \textbf{Robotics:}{ Forward/Inverse Kinematics (DH Parameters), ROS2, RViz2, MoveIt, Gazebo, Path Planning, Motion Control, PID Control, Sensor Fusion, SLAM.} \\
+     \textbf{Electronics:}{ Arduino UNO, Raspberry Pi, STM32, ATmega328P, RP2040, Motor Drivers, Serial Communication (UART, I2C, SPI), LabVIEW, Proteus, NGspice, Pspice.} \\
+     \textbf{AI \& Vision:}{ AIML, Deep Learning (PyTorch, TensorFlow, CNN, YOLO), OpenCV, OpenVINO, AI Image Generation (Stable Diffusion, AUTOMATIC1111, Illustrious Models).} \\
+     \textbf{CAD \& Design:}{ SolidWorks, Fusion 360, AutoCAD, Creo Parametric, ANSYS HFSS, Assembly Design, Rapid Prototyping, 3D Printing (FDM/SLA), Bambu Slicer, LightBurn.} \\
+     \textbf{Languages:}{ C++, Python, Java, JavaScript, HTML, SQL, Embedded C, MATLAB, GNU Octave.} \\
+     \textbf{Soft Skills:}{ Effective Organizer, Team Management, Strong Interpersonal Skills, Problem Solving.}
     }}
  \end{itemize}
 \vspace{-8pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/som-anshu/2.4GHz-microstrip-patch-antenna}{2.4GHz Microstrip Patch Antenna}} $|$ \emph{ANSYS HFSS}}{Oct' 25}
+          \resumeItemListStart
+            \resumeItem{Designed and simulated a high-frequency microstrip patch antenna optimized for 2.4GHz wireless communication applications.}
+            \resumeItem{Conducted electromagnetic field analysis using ANSYS HFSS to evaluate return loss, gain, and radiation patterns.}
+            \resumeItem{Optimized physical dimensions and substrate selection to achieve superior impedance matching and antenna efficiency.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/som-anshu/damn}{Dynamic Audio Monitoring and Narration}} $|$ \emph{Raspberry Pi, Python, AssemblyAI API}}{May' 25}
+          \resumeItemListStart
+            \resumeItem{Developed a real-time transcription system for the deaf using Raspberry Pi to provide accessible communication.}
+            \resumeItem{Integrated AssemblyAI API and WebSockets with an I2C SSD1306 OLED display utilizing multi-threading technology.}
+            \resumeItem{Optimized inference speeds on Raspberry Pi 4B by deploying an Intel AI Accelerator, significantly reducing latency.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/som-anshu/MATLAB-controlled-robotic-manipulator}{3-DOF Robotic Arm with Real-Time Control}} $|$ \emph{MATLAB, SolidWorks, Arduino IDE, Bambu Studio}}{Apr' 24}
+          \resumeItemListStart
+            \resumeItem{Constructed a 3-DOF robotic arm utilizing 3D-printed parts to optimize the payload-to-weight ratio for automated tasks.}
+            \resumeItem{Programmed real-time motor control via MATLAB-UART communication, enabling precise joint actuation.}
+            \resumeItem{Targeted future implementation of Forward and Inverse Kinematics to automate complex trajectory planning.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/som-anshu/python-mysql-accounting}{Python-SQL Accounting Software}} $|$ \emph{Python, MySQL, CLI}}{Jun' 23}
+          \resumeItemListStart
+            \resumeItem{Engineered a database-driven accounting CLI application to manage financial records and client transactions.}
+            \resumeItem{Implemented CRUD operations using Python-MySQL connectivity to facilitate seamless data management.}
+            \resumeItem{Provided a robust interface for searching records by client name or date, streamlining data retrieval.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
 %-----------TRAININGS-----------
 \section{Trainings}
   \resumeSubHeadingListStart
     \resumeProjectHeading
-      {\textbf{AutomateX: Mastering PLCs for Industrial Automation} $|$ \href{https://drive.google.com/file/d/1PUqcvq8SkgS4APbpqYSwzsYsXNxvOywR/view?usp=drive_link}{\emph{LPU}}}{Mar' 25}
+      {\textbf{\href{https://drive.google.com/file/d/1PUqcvq8SkgS4APbpqYSwzsYsXNxvOywR/view?usp=drive_link}{AutomateX: Mastering PLCs for Industrial Automation}} $|$ \emph{LPU}}{Mar' 25}
       \resumeItemListStart
         \resumeItem{Acquired comprehensive knowledge of PLC architecture, ladder logic programming, and industrial automation principles.}
         \resumeItem{Simulated automated industrial workflows using TwidoSuite to manage sensor inputs and heavy actuator outputs.}
@@ -102,49 +137,23 @@
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{\href{https://github.com/som-anshu/damn}{Dynamic Audio Monitoring and Narration}} $|$ \emph{Raspberry Pi, Python, AssemblyAI API}}{Apr' 25 -- May' 25}
-          \resumeItemListStart
-            \resumeItem{Developed a real-time transcription system for the deaf using Raspberry Pi to provide accessible communication.}
-            \resumeItem{Integrated AssemblyAI API and WebSockets with an I2C SSD1306 OLED display utilizing multi-threading technology.}
-            \resumeItem{Achieved 95\%+ transcription accuracy and under 300ms latency, enabling practical, on-the-go conversational assistance.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{\href{https://github.com/som-anshu/MATLAB-controlled-robotic-manipulator}{3-DOF Robotic Arm with Real-Time Control}} $|$ \emph{MATLAB, SolidWorks, Arduino IDE, Bambu Studio}}{Apr' 24}
-          \resumeItemListStart
-            \resumeItem{Constructed a 3-DOF robotic arm utilizing 3D-printed parts to optimize the payload-to-weight ratio for automated tasks.}
-            \resumeItem{Programmed NEMA steppers and Arduino Mega, executing forward and inverse kinematics through MATLAB-UART integration.}
-            \resumeItem{Decreased trajectory error by 20\% during real-time operations, ensuring precise and reliable object manipulation.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{\href{https://github.com/som-anshu}{Smart Energy Meter}} $|$ \emph{ESP32, IOT Monitoring, HTML Webserver}}{Jun' 23}
-          \resumeItemListStart
-            \resumeItem{Designed an IOT-based energy monitoring system to track residential power consumption through a real-time browser interface.}
-            \resumeItem{Configured ESP32 and WIFI modules with ZMPT101B and ZMCT103C sensors, transmitting data to an HTML webserver.}
-            \resumeItem{Delivered voltage and current measurements with precise accuracy, facilitating efficient remote energy management.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
-
 %-----------CERTIFICATES-----------
 \section{Certificates}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-        {\textbf{Data Base Management System} $|$ \href{https://drive.google.com/file/d/1cPZTNh-I-6y_1j0XR1dyLbr4Padv7GvN/view?usp=drive_link}{\emph{NPTEL}}}{Aug' 25}
+        {\textbf{\href{https://drive.google.com/file/d/1cPZTNh-I-6y_1j0XR1dyLbr4Padv7GvN/view?usp=drive_link}{Data Base Management System}} $|$ \emph{NPTEL}}{Aug' 25}
       \resumeProjectHeading
-        {\textbf{Fusioncraft} $|$ \href{https://drive.google.com/file/d/16txdJfMjoQ9aB_c2yHVEDFoT7vu3QOEp/view?usp=drive_link}{\emph{Resolute Lab}}}{Mar' 24}
+        {\textbf{\href{https://drive.google.com/file/d/16txdJfMjoQ9aB_c2yHVEDFoT7vu3QOEp/view?usp=drive_link}{Fusioncraft}} $|$ \emph{Resolute Lab}}{Mar' 24}
     \resumeSubHeadingListEnd
 
 %-----------ACHIEVEMENTS-----------
 \section{Achievements}
     \resumeSubHeadingListStart
       \resumeAchievementHeading
-        {\textbf{\href{https://drive.google.com/file/d/1PNy_NGYBe1Dt2zS2FtCkgpTa2ak69WHM/view?usp=drive_link}{METHOD FOR ENHANCING FOOD ACCESSIBILITY, MONITORING FRESHNESS, AND REDUCING ENERGY LOSS IN CYLINDRICAL REFRIGERATION UNITS}}}{Sep' 25}
+        {\textbf{\href{https://drive.google.com/file/d/1PNy_NGYBe1Dt2zS2FtCkgpTa2ak69WHM/view?usp=drive_link}{Patent: Method for Enhancing Food Accessibility and Energy Efficiency in Refrigeration}}}{Sep' 25}
       \vspace{-2pt}
       \resumeItemListStart
-        \resumeItem{Somanshu Mohapatra, Dr. Sumit Shoor $|$ Application No.: 202511085342 A}
+        \resumeItem{Application No.: 202511085342 A}
       \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -153,12 +162,13 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Lovely Professional University}{Phagwara, Punjab}
-      {Bachelor of Technology in Robotics and Automation Engineering — CGPA: 8.38}{Aug' 23 -- Present}
+      {BTech Robotics and Automation; CGPA: 8.38}{Aug' 23 -- Present}
     \resumeSubheading
       {Shri S.N. Siddeshwar Public School}{Gurugram, Haryana}
-      {Intermediate, PCMB — Percentage: 85.6\%}{Mar' 21 -- May' 23}
+      {Intermediate, PCMB; Percentage: 85.6\%}{Mar' 21 -- May' 23}
     \resumeSubheading
       {Ryan International School}{Gurugram, Haryana}
-      {Matriculation — Percentage: 81.6\%}{Mar' 20 -- May' 21}
+      {Matriculation; Percentage: 81.6\%}{Mar' 20 -- May' 21}
   \resumeSubHeadingListEnd
+
 \end{document}
