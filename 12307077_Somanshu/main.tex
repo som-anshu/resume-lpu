@@ -7,9 +7,9 @@
 \usepackage{xcolor}
 \usepackage{tabularx}
 
-% Clean Font Setup (Fixes Overleaf Warnings)
-\usepackage[T1]{fontenc}
-\usepackage{tgpagella} 
+% Font Setup for Georgia (Compile with XeLaTeX or LuaLaTeX)
+\usepackage{fontspec}
+\setmainfont{Georgia}
 
 % Color Configurations
 \definecolor{resblue}{HTML}{2B3E94} % Deep sapphire blue
@@ -21,8 +21,8 @@
 
 % Section Heading Setup
 \newcommand{\resumeheading}[1]{
-    \vspace{6pt}
-    {\large\color{resblue} #1}
+    \vspace{5pt}
+    {\large\textbf{\color{resblue} #1}}
     \vspace{1pt}
     {\color{resblue}\hrule height 0.5pt}
     \vspace{4pt}
@@ -46,27 +46,27 @@
 %----------------------------------------------------------------------------------------
 \resumeheading{SKILLS}
 
-\begin{tabularx}{\textwidth}{@{}p{3.0cm} X@{}}
-    \textbf{\color{resblue} Languages:} & C++, Python, Embedded C, MATLAB (Simulink, Robotics Toolbox). \\
-    \textbf{\color{resblue} Robotics:} & Forward/Inverse Kinematics (DH Parameters), ROS2, Gazebo, Path Planning, Motion Control, PID Control, Sensor Fusion, SLAM. \\
-    \textbf{\color{resblue} Electronics:} & Arduino UNO Q, Raspberry Pi, STM32, ATmega328P, RP2040 \\
-    & Motor Drivers (DRV8825, TB6600), Serial Communication (UART, I2C, SPI, CAN). \\
-    \textbf{\color{resblue} CAD \& Design:} & SolidWorks, Fusion 360, AutoCAD, Creo Parametric, FEA, Assembly Design, Rapid Prototyping, 3D Printing (FDM/SLA). \\
-    \textbf{\color{resblue} Soft Skills:} & Effective Organizer, Team Management, Strong Interpersonal Skills, Problem Solving.
+\begin{tabularx}{\textwidth}{@{}p{3.2cm} X@{}}
+    \textbf{\color{resblue} Languages:} & Experienced in C++, Python, Embedded C, and MATLAB for algorithm development and simulation. \\
+    \textbf{\color{resblue} Robotics:} & Applied Forward/Inverse Kinematics (DH Parameters), ROS, and Gazebo for path planning and SLAM. \\
+    \textbf{\color{resblue} Electronics:} & Configured Arduino UNO, Raspberry Pi, STM, and motor drivers utilizing UART, I2C, SPI, and CAN. \\
+    \textbf{\color{resblue} CAD \& Design:} & Designed assemblies using SolidWorks and Fusion, applying FEA and FDM/SLA printing for prototyping. \\
+    \textbf{\color{resblue} Soft Skills:} & Effective Organizer, Team Management, Strong Interpersonal Skills, and logical Problem Solving.
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
-% PROFESSIONAL EXPERIENCE
+% TRAININGS
 %----------------------------------------------------------------------------------------
-\resumeheading{INTERNSHIP}
+\resumeheading{TRAININGS}
 
 \begin{tabularx}{\textwidth}{@{}X r@{}}
-\textbf{\color{resblue} \href{https://drive.google.com/file/d/1PUqcvq8SkgS4APbpqYSwzsYsXNxvOywR/view?usp=drive_link}{AutomateX -- PLC based training for Industrial Automation}} & Jun' 25 -- Jul' 25
+\textbf{\color{resblue} AutomateX: Mastering PLCs for Industrial Automation} $|$ \textit{LPU} & Mar' 25
 \end{tabularx}
-\textit{Student Intern $|$ Ladder Logic, LogixPro, TwidoSuite}
+\textit{\href{https://drive.google.com/file/d/1PUqcvq8SkgS4APbpqYSwzsYsXNxvOywR/view?usp=drive_link}{View Training Certificate}}
 \begin{itemize}[leftmargin=1.5em, itemsep=0pt, parsep=1pt, topsep=2pt]
-    \item Engineered an automated feeder control system in LogixPro using ladder logic, reducing manual labor by 70\% and feed wastage by 25\%.
-    \item Implemented safety interlocks, emergency-stop recovery, and auto/manual modes to ensure zero-failure restart behavior and reliable operation.
+    \item Acquired comprehensive knowledge of PLC architecture, ladder logic programming, and industrial automation principles.
+    \item Simulated automated industrial workflows using TwidoSuite to manage sensor inputs and heavy actuator outputs.
+    \item Tested fail-safe mechanisms and sequence patterns to reinforce practical understanding of factory floor operations.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -78,8 +78,9 @@
 \textbf{\color{resblue} \href{https://github.com/som-anshu/damn}{Dynamic Audio Monitoring and Narration}} $|$ \textit{Raspberry Pi, Python, AssemblyAI API} & Apr' 25 -- May' 25
 \end{tabularx}
 \begin{itemize}[leftmargin=1.5em, itemsep=0pt, parsep=1pt, topsep=2pt]
-    \item Developed a Python-based real-time transcription system for the deaf using Raspberry Pi 4B, achieving 95\%+ accuracy with $<$300ms latency.
-    \item Integrated AssemblyAI WebSockets with an I2C SSD1306 OLED display using multi-threading to ensure seamless, non-blocking subtitle updates.
+    \item Developed a real-time transcription system for the deaf using Raspberry Pi to provide accessible communication.
+    \item Integrated AssemblyAI API and WebSockets with an I2C SSD1306 OLED display utilizing multi-threading technology.
+    \item Achieved 95\%+ transcription accuracy and under 300ms latency, enabling practical, on-the-go conversational assistance.
 \end{itemize}
 
 \vspace{2pt}
@@ -88,29 +89,30 @@
 \textbf{\color{resblue} \href{https://github.com/som-anshu/MATLAB-controlled-robotic-manipulator}{3-DOF Robotic Arm with Real-Time Control}} $|$ \textit{MATLAB, SolidWorks, Arduino IDE, Bambu Studio} & Apr' 24
 \end{tabularx}
 \begin{itemize}[leftmargin=1.5em, itemsep=0pt, parsep=1pt, topsep=2pt]
-    \item Constructed a 3-DOF robotic arm using NEMA 17 steppers and Arduino Mega, utilizing 3D-printed components to optimize payload-to-weight ratio.
-    \item Implemented forward and inverse kinematics via MATLAB-UART communication, reducing trajectory error by 20\% during real-time tasks.
+    \item Constructed a 3-DOF robotic arm utilizing 3D-printed parts to optimize the payload-to-weight ratio for automated tasks.
+    \item Programmed NEMA steppers and Arduino Mega, executing forward and inverse kinematics through MATLAB-UART integration.
+    \item Decreased trajectory error by 20\% during real-time operations, ensuring precise and reliable object manipulation.
 \end{itemize}
 
 \vspace{2pt}
 
 \begin{tabularx}{\textwidth}{@{}X r@{}}
-\textbf{\color{resblue} Smart Energy Meter} $|$ \textit{ESP32, IoT Monitoring, HTML Webserver} & Jun' 23
+\textbf{\color{resblue} \href{YOUR_GITHUB_LINK_HERE}{Smart Energy Meter}} $|$ \textit{ESP32, IOT Monitoring, HTML Webserver} & Jun' 23
 \end{tabularx}
 \begin{itemize}[leftmargin=1.5em, itemsep=0pt, parsep=1pt, topsep=2pt]
-    \item Designed an IoT-based energy monitoring system using ESP32 and Wi-Fi to track power consumption via a real-time browser interface.
-    \item Integrated ZMPT101B and ZMCT103C sensors to measure voltage and current with $\pm$3\% accuracy visualized via custom HTML dashboard.
+    \item Designed an IOT-based energy monitoring system to track residential power consumption through a real-time browser interface.
+    \item Configured ESP32 and WIFI modules with ZMPT101B and ZMCT103C sensors, transmitting data to an HTML webserver.
+    \item Delivered voltage and current measurements with precise accuracy, facilitating efficient remote energy management.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
-% CERTIFICATIONS
+% CERTIFICATES
 %----------------------------------------------------------------------------------------
 \resumeheading{CERTIFICATES}
 
 \begin{tabularx}{\textwidth}{@{}X r@{}}
-\textbf{\color{resblue} \href{https://drive.google.com/file/d/1cPZTNh-I-6y_1j0XR1dyLbr4Padv7GvN/view?usp=drive_link}{Data Base Management System}} $|$ \textit{NPTEL} & Aug' 25 \\ [1.5pt]
-\textbf{\color{resblue} \href{https://drive.google.com/file/d/1PUqcvq8SkgS4APbpqYSwzsYsXNxvOywR/view?usp=drive_link}{AutomateX: Mastering PLCs for Industrial Automation}} $|$ \textit{LPU} & Mar' 25 \\[1.5pt]
-\textbf{\color{resblue} \href{https://drive.google.com/file/d/16txdJfMjoQ9aB_c2yHVEDFoT7vu3QOEp/view?usp=drive_link}{Fusioncraft}} $|$ \textit{Resolute Lab} & Mar' 24
+\textbf{\color{resblue} Data Base Management System} $|$ \href{https://drive.google.com/file/d/1cPZTNh-I-6y_1j0XR1dyLbr4Padv7GvN/view?usp=drive_link}{NPTEL} & Aug' 25 \\ [1.5pt]
+\textbf{\color{resblue} Fusioncraft} $|$ \href{https://drive.google.com/file/d/16txdJfMjoQ9aB_c2yHVEDFoT7vu3QOEp/view?usp=drive_link}{Resolute Lab} & Mar' 24
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
